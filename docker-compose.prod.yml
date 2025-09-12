@@ -1,0 +1,10 @@
+
+services:
+  gnn-api:
+    image: gnn-api-prod
+    container_name: gnn-api-server-prod
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
