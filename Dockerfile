@@ -7,9 +7,9 @@ RUN conda env create -f environment.yml && conda clean -afy
 
 # SHELL ["conda", "run", "-n", "env_gnn", "/bin/bash", "-c"]
 
-COPY app/ .
+COPY ./app .
 
 EXPOSE 8000
 
 # CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
-CMD ["conda", "run", "-n", "env_gnn", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["conda", "run", "-n", "env_gnn", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
