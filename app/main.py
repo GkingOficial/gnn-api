@@ -16,7 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL_CKPT_PATH = "app/model/weights/ToxicidadeGCN_fold0.ckpt-159"
+MODEL_CKPT_PATH = "model/weights/ToxicidadeGCN_fold0.ckpt-159"
 
 if not os.path.exists(MODEL_CKPT_PATH + ".index"):
     raise FileNotFoundError(f"Ficheiro de checkpoint do modelo não encontrado em {MODEL_CKPT_PATH}. Verifique se os ficheiros .ckpt, .index e .meta estão no diretório correto.")
